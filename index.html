@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101014">
+  <meta name="description" content="Story Of 10 — Hindi, Odia and English stories and videos.">
+  <title>Story Of 10 — Stories for Every Mood</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-mark">S</span><span>STORY <b>OF 10</b><small id="tagline">Stories for every mood</small></span></a>
+  <div class="header-actions">
+    <select id="language" aria-label="Choose language">
+      <option value="hi">हिंदी</option><option value="or">ଓଡ଼ିଆ</option><option value="en">English</option>
+    </select>
+    <a class="admin-link" href="admin.html">Admin</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow" id="heroEyebrow">YOUR NEXT STORY STARTS HERE</span>
+      <h1 id="heroTitle">हर कहानी में<br><span>एक नई दुनिया।</span></h1>
+      <p id="heroText">हॉरर, कार्टून, कॉमेडी और दिल छू लेने वाली कहानियाँ — एक ही जगह।</p>
+      <a href="#library" class="primary-btn" id="exploreBtn">कहानियाँ देखें <span>→</span></a>
+    </div>
+    <div class="hero-art" aria-hidden="true"><div class="moon"></div><div class="hill hill-back"></div><div class="hill hill-front"></div><div class="tree">♠</div><div class="hero-stamp">STORY<br><b>10</b></div></div>
+  </section>
+
+  <section class="toolbar" id="library">
+    <div><span class="section-kicker" id="libraryKicker">THE LIBRARY</span><h2 id="libraryTitle">अपनी अगली कहानी चुनें</h2></div>
+    <label class="searchbox"><span>⌕</span><input id="search" type="search" placeholder="कहानी खोजें..." aria-label="Search stories"></label>
+  </section>
+  <nav class="chips" id="categories" aria-label="Story categories"></nav>
+  <div class="notice" id="notice">ये डेमो कहानियाँ हैं। अपनी वीडियो फाइलें Admin पेज से जोड़ें।</div>
+  <section id="storyGrid" class="story-grid" aria-live="polite"></section>
+  <section class="empty-state hidden" id="emptyState"><h3 id="emptyTitle">कोई कहानी नहीं मिली</h3><p id="emptyText">दूसरा नाम या कैटेगरी आज़माएँ।</p></section>
+</main>
+
+<footer class="footer">
+  <a class="brand footer-brand" href="#"><span class="brand-mark">S</span><span>STORY <b>OF 10</b><small>Stories for every mood</small></span></a>
+  <p>© <span id="year"></span> Story Of 10. केवल वही वीडियो अपलोड करें जिनके अधिकार आपके पास हों।</p>
+  <div><a href="privacy.html">Privacy</a><a href="admin.html">Admin</a></div>
+</footer>
+
+<div class="player-modal hidden" id="playerModal" role="dialog" aria-modal="true" aria-label="Story video player">
+  <div class="player-panel">
+    <div class="player-head"><div><span class="section-kicker" id="playerCategory">STORY</span><h2 id="playerTitle">Story title</h2></div><button class="icon-btn" id="closePlayer" aria-label="Close player">✕</button></div>
+    <video id="videoPlayer" controls playsinline preload="metadata"></video>
+    <p id="playerDescription"></p>
+    <p class="player-hint" id="playerHint">अगर वीडियो नहीं चलता, Admin में सही MP4 URL डालें या होस्टिंग पर वीडियो अपलोड करें।</p>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

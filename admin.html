@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101014"><title>Story Of 10 — Admin Demo</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">S</span><span>STORY <b>OF 10</b><small>Admin demo</small></span></a><a class="admin-link" href="index.html">← Website</a></header>
+<main class="admin-wrap">
+ <span class="section-kicker">CONTENT MANAGEMENT</span><h1 style="font-size:36px;margin-top:8px">Admin <span>Panel</span></h1>
+ <div class="warning"><b>महत्वपूर्ण सुरक्षा सूचना:</b> यह शुरुआती डेमो Admin पेज है। इसमें वास्तविक लॉगिन/सर्वर सुरक्षा नहीं है और डेटा केवल इसी ब्राउज़र के localStorage में सेव होता है। इसे पब्लिक वेबसाइट पर ऐसे ही अपलोड न करें। सार्वजनिक साइट के लिए Firebase Authentication/Firestore या सुरक्षित सर्वर-साइड Admin Panel जोड़ना जरूरी है।</div>
+ <section class="admin-card"><h2>नई कहानी जोड़ें</h2>
+  <form id="storyForm" class="admin-form">
+   <label class="field">Title — हिंदी<input name="titleHi" required placeholder="जैसे भूतिया गाँव"></label>
+   <label class="field">Title — ଓଡ଼ିଆ<input name="titleOr" placeholder="ଯେପରି ଭୂତିଆ ଗାଁ"></label>
+   <label class="field">Title — English<input name="titleEn" placeholder="Haunted Village"></label>
+   <label class="field">Category<select name="category"><option>Horror</option><option>Cartoon</option><option>Comedy</option><option>Moral</option></select></label>
+   <label class="field">Duration<input name="duration" placeholder="10 min"></label>
+   <label class="field">Video URL (public HTTPS MP4)<input name="videoUrl" type="url" placeholder="https://example.com/story.mp4"></label>
+   <label class="field full">Poster Image URL (optional)<input name="posterUrl" type="url" placeholder="https://example.com/poster.jpg"></label>
+   <label class="field full">Description — हिंदी<textarea name="descHi" placeholder="कहानी के बारे में लिखें"></textarea></label>
+   <label class="field full">Description — ଓଡ଼ିଆ<textarea name="descOr" placeholder="କାହାଣୀ ବିଷୟରେ ଲେଖନ୍ତୁ"></textarea></label>
+   <label class="field full">Description — English<textarea name="descEn" placeholder="Write a short description"></textarea></label>
+   <label class="field">Content language<select name="language"><option value="hi">हिंदी</option><option value="or">ଓଡ଼ିଆ</option><option value="en">English</option></select></label>
+   <label class="field">Poster emoji<input name="emoji" value="🎬" maxlength="8"></label>
+   <div class="field full"><button class="admin-button" type="submit">Save Story</button></div>
+  </form>
+ </section>
+ <section class="admin-card"><div style="display:flex;align-items:center;justify-content:space-between;gap:10px"><h2>Saved stories</h2><button class="delete-btn" id="resetDemo">Reset demo data</button></div><div id="adminList" class="admin-list"></div></section>
+ <section class="admin-card"><h2>वीडियो जोड़ने का तरीका</h2><ol style="color:var(--muted);line-height:1.9"><li>वीडियो को अपनी वेब होस्टिंग या उचित वीडियो स्टोरेज पर अपलोड करें।</li><li>ऐसा HTTPS URL लें जो वीडियो को सार्वजनिक रूप से चला सके।</li><li>URL को ऊपर Video URL में पेस्ट करें।</li><li>Save Story दबाएँ और होम पेज पर प्ले करके जाँचें।</li></ol><p style="color:var(--muted);font-size:12px">इस डेमो में सीधे बड़ी वीडियो फाइल अपलोड नहीं होती। केवल वीडियो URL सेव होता है।</p></section>
+</main>
+<script src="admin.js"></script>
+</body></html>
